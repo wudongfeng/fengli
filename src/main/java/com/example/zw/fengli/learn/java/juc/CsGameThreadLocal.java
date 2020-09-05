@@ -9,5 +9,13 @@ public class CsGameThreadLocal {
     private static final Integer TOTAL_PLAYERS = 10;
     private static final ThreadLocalRandom RANDOM = ThreadLocalRandom.current();
 
+    private static final ThreadLocal<Integer> BULLET_NUMBER_THREADLOCAL = new ThreadLocal<Integer>() {
+
+        @Override
+        protected Integer initialValue() {
+            return BULLET_NUMBER;
+        }
+
+    };
 
 }

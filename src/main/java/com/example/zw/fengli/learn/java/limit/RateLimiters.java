@@ -9,10 +9,10 @@ import java.util.concurrent.Semaphore;
  * @Date 2020/9/8 7:19 PM
  * @Version 0.0.1
  */
-public class RateLimeter {
+public class RateLimiters {
     private Semaphore semaphore;
 
-    public RateLimeter(int permits) {
+    public RateLimiters(int permits) {
         semaphore = new Semaphore(permits);
     }
 
